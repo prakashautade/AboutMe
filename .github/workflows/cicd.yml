@@ -1,7 +1,7 @@
-name: Lint
+name: CICD
 on: pull_request
 jobs:
-  lint:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
