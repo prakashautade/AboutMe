@@ -1,7 +1,7 @@
 name: CICD
 on: pull_request
 jobs:
-  CICD:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -9,5 +9,5 @@ jobs:
         uses: actions/setup-node@v1
       - name: Install dependencies
         run: npm install
-      - name: Execute lint
-        uses: ./.github/actions/lint
+      - name: Lint
+        run: npm run lint
