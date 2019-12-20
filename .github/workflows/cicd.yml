@@ -11,3 +11,7 @@ jobs:
         run: npm install
       - name: Lint
         run: npm run lint
+      - name: Test
+        run: ng test --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - name: e2e
+        run: ng e2e --protractor-config=e2e/protractor-ci.conf.js
