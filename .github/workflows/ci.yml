@@ -1,4 +1,4 @@
-name: CICD
+name: CI
 on: pull_request
 jobs:
   Build:
@@ -15,3 +15,8 @@ jobs:
         run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
       # - name: e2e
       #   run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}      
+          path-to-lcov: ./coverage/AboutMe/lcov.info
