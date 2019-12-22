@@ -2,7 +2,7 @@ name: CICD
 on: pull_request
 jobs:
   Build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
       - name: Install NodeJS
@@ -11,3 +11,7 @@ jobs:
         run: npm install
       - name: Lint
         run: npm run lint
+      - name: Test
+        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      # - name: e2e
+      #   run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
