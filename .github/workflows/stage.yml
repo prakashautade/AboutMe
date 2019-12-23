@@ -1,10 +1,10 @@
-name: Lint
+name: Stage
 on:
-  pull_request:
+  push:
     branches:
       - master
 jobs:
-  Lint:
+  Stage:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
@@ -12,5 +12,7 @@ jobs:
         uses: actions/setup-node@v1
       - name: Install dependencies
         run: npm install
-      - name: Lint
-        run: npm run lint
+      - name: Deploy
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy -- --base-href=/AboutMe/
