@@ -1,7 +1,8 @@
 name: package
 on:
   release:
-    types: created
+    types:
+      - created
 jobs:
   package:
     name: package
