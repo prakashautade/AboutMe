@@ -1,0 +1,20 @@
+name: package
+on:
+  push:
+    branches:
+      - master
+jobs:
+  package:
+    name: package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v1    
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: package
+        id: package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm login --registry=https://npm.pkg.github.com/
+        run: npm publish
