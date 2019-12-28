@@ -14,8 +14,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           registry-url: https://npm.pkg.github.com/
-      - name: Update version
-        run: npm version ${{ github.ref }}
       - name: Publish
         run: npm publish
         env:
