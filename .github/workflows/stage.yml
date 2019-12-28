@@ -1,18 +1,18 @@
-name: stage
-on:
-  pull_request:
-    branches:
-      - master
-jobs:
-  stage:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install NodeJS
-        uses: actions/setup-node@v1
-      - name: Install dependencies
-        run: npm install
-      - name: Deploy
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npm run deploy -- --no-silent --repo=https://github.com/prakashautade/AboutMe.git --base-href=/AboutMe/ --name=prakashautade --email=prakash.autade@mail.com
+# name: stage
+# on:
+#   pull_request:
+#     branches:
+#       - master
+# jobs:
+#   stage:
+#     runs-on: ubuntu-18.04
+#     steps:
+#       - uses: actions/checkout@v1
+#       - name: Install NodeJS
+#         uses: actions/setup-node@v1
+#       - name: Install dependencies
+#         run: npm install
+#       - name: Deploy
+#         env:
+#           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#         run: npm run deploy -- --no-silent --repo=https://github.com/prakashautade/AboutMe.git --base-href=/AboutMe/ --name=prakashautade --email=prakash.autade@mail.com

@@ -1,6 +1,6 @@
 {
   "name": "about-me",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -48,5 +48,11 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/@prakashautade" }
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/@prakashautade" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prakashautade/AboutMe.git"
+  }
 }
