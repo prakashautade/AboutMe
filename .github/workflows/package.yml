@@ -12,9 +12,9 @@ jobs:
         uses: actions/setup-node@v1    
       - name: Checkout code
         uses: actions/checkout@master
-      - name: package
-        id: package
+      - name: Login
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm login --registry=https://npm.pkg.github.com/
+      - name: Publish
         run: npm publish
