@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
     "angular-cli-ghpages": "^0.6.1",
+    "bootstrap": "^4.4.1",
     "eslint": "^6.7.2",
     "rxjs": "~6.4.0",
     "serialize-javascript": "^2.1.2",
