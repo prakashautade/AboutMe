@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('AboutMe');
   });
 
-  it('should render title', () => {
+  it('should render welcome message', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('AboutMe app is running!');
+    expect(compiled.querySelector('.h1').textContent).toContain('Welcome to AboutMe.');
   });
 });
