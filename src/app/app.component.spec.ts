@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('AboutMe');
   });
 
-  it('should render welcome message', () => {
+  it('should render landing page message', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.display-4').textContent).toContain('Welcome to AboutMe.');
+    expect(compiled.querySelector('.display-4').textContent).toContain('AboutMe');
   });
 });
