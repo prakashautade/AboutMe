@@ -15,4 +15,4 @@ jobs:
       - name: Deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npm run deploy -- --no-silent --repo=https://github.com/prakashautade/AboutMe.git --base-href=https://app.demo-website-s3.tk/ --name=prakashautade --email=prakash.autade@mail.com
+        run: npm run deploy -- --no-silent --repo=https://github.com/prakashautade/AboutMe.git --base-href=https://git.demo-website-s3.tk/ --name=prakashautade --email=prakash.autade@mail.com
